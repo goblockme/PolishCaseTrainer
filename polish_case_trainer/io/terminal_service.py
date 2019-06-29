@@ -6,7 +6,7 @@ import inquirer
 class TerminalService:
 
     def display_message(self, text):
-        print text
+        print(text)
 
     def prompt_question_response(self, choices=None):
         if isinstance(choices, list):
@@ -18,8 +18,7 @@ class TerminalService:
             raise TypeError("The choices argument must be a list")
 
     def get_console_input(self):
-        print "> ",
-        return raw_input().decode(sys.stdin.encoding or locale.getpreferredencoding(True))
+        return input("> ")
 
     def get_checkbox_options(self, text, choices, default=[]):
         result = inquirer.prompt([
