@@ -19,22 +19,16 @@ Then navigate into the `PolishCaseTrainer` directory (`cd PolishCaseTrainer`).
 
 You may want to install this program in a virtual environment rather than to your system Python installation. If so you should initialise that and active it now.
 
-Install the dependencies as follows (pip will require root if installing to system Python env):
+We simply need to use python pip to install the module (will require root if not in virtualenv):
 
 ```bash
-pip install -r requirements.txt
-```
-
-After this, we simply need to use Python's setup.py features to install the module (again will require root if not in virtualenv):
-
-```bash
-python setup.py install
+pip install .
 ```
 
 If you want to develop this app, instead install with:
 
 ```bash
-python setup.py develop
+ppip install -e .
 ```
 
 Once this is completed you'll have access to the `polish_case_trainer` script that can be run from the command line at any time. It will be on the PATH so you don't need to be in a specific directory to run it.
